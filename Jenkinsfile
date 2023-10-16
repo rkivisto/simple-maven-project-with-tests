@@ -1,4 +1,4 @@
-podTemplate(containers: [containerTemplate(name: 'maven', image: 'maven', command: 'sleep', args: 'infinity')]) {
+podTemplate(containers: [containerTemplate(name: 'maven', image: 'maven:3.9.4-eclipse-temurin-11', command: 'sleep', args: 'infinity')]) {
   node(POD_LABEL) {
     checkout scm
     container('maven') {
